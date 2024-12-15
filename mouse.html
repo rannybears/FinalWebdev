@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krezier - Mouse</title>
+    <link rel="stylesheet" href="lp.css">
+</head>
+<body>
+    <!-- Additional Header -->
+    <header class="additional-header">
+        <div class="container">
+            <nav>
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About Us</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Original Header -->
+    <header class="header">
+        <div class="container">
+            <h1>Krezier</h1>
+            <nav>
+                <a href="laptops.html">Laptops</a>
+                <a href="keyboards.html">Keyboards</a>
+                <a href="mouse.html">Mouse</a>
+                <a href="headphones.html">Headphones</a>
+                <a href="consoles.html">Consoles</a>
+                <a href="#" class="cart-button" onclick="openCartPopup()">Cart (0)</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Mouse Section -->
+        <section id="mouse" class="category-section">
+            <h2>Mice</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="images/mouse1.png" alt="Mouse 1">
+                    <h3>ASUS ROG P714 Keris II Ace Ultralight Wireless Gaming Mouse | White</h3>
+                    <p>Point-and-Click Precision.</p>
+                    <p><strong>₱7,500.00</strong></p>
+                    <button onclick="addToCart('ASUS ROG P714 Keris II', 7500.00)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/mouse2.png" alt="Mouse 2">
+                    <h3>Razer DeathAdder V3 HyperSpeed Ultra-lightweight Wireless Ergonomic Esports Mouse</h3>
+                    <p>Compact and Reliable.</p>
+                    <p><strong>₱6,295.00</strong></p>
+                    <button onclick="addToCart('Razer DeathAdder V3 HyperSpeed', 6295.00)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/mouse3.png" alt="Mouse 3">
+                    <h3>Logitech G309 Lightspeed Wireless Gaming Mouse | White</h3>
+                    <p>Perfect for All Tasks.</p>
+                    <p><strong>₱4,695.00</strong></p>
+                    <button onclick="addToCart('Logitech G309 Lightspeed', 4695.00)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Popup -->
+<div id="cart-popup" class="cart-popup">
+    <div class="cart-content">
+        <!-- Close Button Inside the Popup -->
+        <button class="close-btn" onclick="closeCartPopup()">×</button>
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p id="cart-total">Total: ₱0.00</p>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+</div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Gaming Gear Store. All rights reserved.</p>
+    </footer>
+
+    <script src="lp.js"></script>
+</body>
+</html>
